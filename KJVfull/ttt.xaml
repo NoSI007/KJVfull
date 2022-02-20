@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="KJVfull.ttt"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:KJVfull"
+             mc:Ignorable="d" 
+             d:DesignHeight="36" d:DesignWidth="800">
+
+    <StackPanel Orientation="Horizontal" Canvas.Top="10"  Canvas.Left="296">
+        <StackPanel.Resources>
+            <Style TargetType="TextBox">
+                <Setter Property="VerticalContentAlignment" Value="center"/>
+                <Setter Property="HorizontalContentAlignment" Value="center"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="Foreground" Value="Blue"/>
+                <Setter Property="Height" Value="18"/>
+
+            </Style>
+            <Style TargetType="TextBlock">
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="Foreground" Value="black"/>
+                <Setter Property="Height" Value="18"/>
+            </Style>
+        </StackPanel.Resources>
+        <Button x:Name="zPrevChapter" Width="32" FontFamily="Segoe UI Symbole" Click="zPrevChapter_Click" Content="◁"/>
+        <Button x:Name="zPrevSection" Width="32" FontFamily="Segoe UI Symbole" Click="zPrevSection_Click" Content="⮜"/>
+        <TextBox x:Name="zChapterNSect" Width="64"  Text="123:1234" Margin="8,0,8,0"/>
+        <TextBlock x:Name="zMaxCaS" Text="123 / 1234" VerticalAlignment="Center" Width="64" Margin="0,0,8,0"/>
+        <Button x:Name="zNextSection" Width="32" FontFamily="Segoe UI Symbole" Click="zNextSection_Click" Content="⮞"/>
+        <Button x:Name="zNextChapter" Width="32" FontFamily="Segoe UI Symbole" Click="zNextChapter_Click" Content="▷"/>
+    </StackPanel>
+
+</UserControl>

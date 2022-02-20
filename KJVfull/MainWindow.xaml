@@ -1,0 +1,98 @@
+﻿<Window x:Class="KJVfull.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KJVfull"
+        mc:Ignorable="d"
+        ResizeMode="NoResize"
+        Title="KJV Bible" Height="450" Width="660">
+    <Window.Resources>
+        <!--<Style TargetType="ListBoxItem">
+            <Setter Property="TextBlock.TextWrapping" Value="WrapWithOverflow"/>
+            <Setter Property="TextBlock.TextTrimming" Value="WordEllipsis"/>
+            <Setter Property="TextBlock.FontStretch" Value="Condensed"/>
+            <Setter Property="FontFamily" Value="Segoe UI Symbol"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="Black"/>
+        </Style>-->
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#FFEDEBE1"/>
+            <Setter Property="Foreground" Value="Blue"/>
+        </Style>
+        <Style TargetType="ToggleButton">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="DarkBlue"/>
+        </Style>
+        <Style TargetType="ListBoxItem">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="DarkBlue"/>
+        </Style>
+        <Style x:Key="ListBoxItemContainerStyle1" TargetType="{x:Type ListBoxItem}">
+            <Setter Property="TextBlock.TextTrimming" Value="WordEllipsis"/>
+            <Setter Property="TextBlock.FontStretch" Value="Condensed"/>
+            <Setter Property="FontFamily" Value="Segoe UI Symbol"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="Black"/>
+        </Style>
+    </Window.Resources>
+    <Canvas>
+        <ToggleButton x:Name="zBooks" Click="zBooks_Click" Width="100" Content="New" Canvas.Left="10" Canvas.Top="10"/>
+        <StackPanel Orientation="Horizontal" Canvas.Top="10"  Canvas.Left="200">
+            <StackPanel.Resources>
+                <Style TargetType="TextBox">
+                    <Setter Property="VerticalContentAlignment" Value="center"/>
+                    <Setter Property="HorizontalContentAlignment" Value="center"/>
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <Setter Property="Foreground" Value="Blue"/>
+                    <Setter Property="Height" Value="18"/>
+                    <Setter Property="FontSize" Value="14"/>
+
+                </Style>
+                <Style TargetType="TextBlock">
+                    <Setter Property="Background" Value="#E0EFE0"/>
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <Setter Property="Foreground" Value="black"/>
+                    <Setter Property="Height" Value="18"/>
+                    <Setter Property="FontSize" Value="14"/>
+                </Style>
+            </StackPanel.Resources>
+            <Button x:Name="zPrevChapter" Width="32" FontFamily="Segoe UI Symbole" Click="zPrevChapter_Click" Content="◁"/>
+            <Button x:Name="zPrevSection" Width="32" FontFamily="Segoe UI Symbole" Click="zPrevSection_Click" Content="⮜"/>
+            <TextBox x:Name="zChapterNSect" Width="64"   Margin="8,0,8,0" TextChanged="zChapterNSect_TextChanged"/>
+            <Button x:Name="zGo" Click="zGo_Click"  FontFamily="Segoe UI Symbole" Width="32" Content="✓"/>
+            <Button x:Name="zSpeak"  Width="44" Content="Speak" Click="zSpeak_Click"/>
+            <TextBlock x:Name="zMaxCaS"   VerticalAlignment="Center" Width="72" Margin="0,0,8,0"/>
+            <Button x:Name="zNextSection" Width="32" FontFamily="Segoe UI Symbole" Click="zNextSection_Click" Content="⮞"/>
+            <Button x:Name="zNextChapter" Width="32" FontFamily="Segoe UI Symbole" Click="zNextChapter_Click" Content="▷"/>
+        </StackPanel>
+        <Label x:Name="zHeading"
+               Canvas.Left="120" Canvas.Top="33" 
+               HorizontalContentAlignment="Center" 
+               Width="480"/>
+        <ListBox x:Name="zBList" Width="128" 
+                 Height="320" 
+                 Canvas.Top="64" Canvas.Left="10" 
+                 ScrollViewer.CanContentScroll="True" 
+                 ScrollViewer.VerticalScrollBarVisibility="Auto"
+                 SelectionMode="Single"
+                 SelectionChanged="zBList_SelectionChanged"
+                 />
+        <ListBox 
+            x:Name="HolyText"  
+            ScrollViewer.CanContentScroll="True"
+                   ScrollViewer.VerticalScrollBarVisibility="Auto"
+                   Padding="10" Background="#FFF3F2F2" 
+                   Foreground="Black" Canvas.Left="148" 
+                   Canvas.Top="64" Width="480" 
+                   Height="320" d:ItemsSource="{d:SampleData ItemCount=5}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding .}" Width="440" TextWrapping="Wrap" FontFamily="Segoe UI Symbol" FontWeight="Medium"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Canvas>
+</Window>

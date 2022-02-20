@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Search Results</title>
+        <style>
+        body{
+            font-family:'Times New Roman', Times, serif;
+            margin-left:30px;
+            margin-right:30px;
+        }
+        h1{
+            text-align:center;
+            text-decoration:underline;
+            color:darkblue;
+        }
+        p{
+            color:darkblue;
+            font-weight:400;
+            line-height:150%;
+        }
+
+            .sp0, .sp1, .sp2, .sp3, .sp4, .sp5, .sp6 
+            {
+                font-weight: 900;
+                color: purple;
+                margin-right: 4px;
+                padding: 2px;
+                background-image: linear-gradient(to right, white,lightskyblue);
+            }
+
+            .sp0 {
+                border: 1px inset red;
+                border-radius:6px;
+
+            }
+            .sp1 {
+                border: 1px solid orange;
+            }
+            .sp2 {
+                border: 1px solid yellow;
+            }
+            .sp3 {
+                border: 1px solid green;
+            }
+            .sp4 {
+                border: 1px solid blue;
+            }
+            .sp5 {
+                border: 1px solid indigo;
+            }
+            .sp6 {
+                border: 1px solid violet;
+            }
+    </style>
+</head>
+<body>
