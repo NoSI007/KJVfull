@@ -1,0 +1,1 @@
+https://stackoverflow.com/questions/54973536/for-json-path-results-in-ssms-truncated-to-2033-characters

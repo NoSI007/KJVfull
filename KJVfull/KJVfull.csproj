@@ -136,6 +136,7 @@
     <Content Include="db\dbo.BSection.Table.sql" />
     <Content Include="db\dbo.Matrix.Table.sql" />
     <Content Include="output.html" />
+    <Content Include="section.html" />
     <None Include="Resources\outres.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

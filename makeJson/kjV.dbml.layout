@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="kjV">
+  <DataContextMoniker Name="/kjVDataContext" />
+  <nestedChildShapes>
+    <classShape Id="c4449643-78a2-451e-a0ab-f9f2b148a6a3" absoluteBounds="4.75, 1.375, 2, 1.0363285319010418">
+      <DataClassMoniker Name="/kjVDataContext/json4section" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cdb44460-78c7-43d7-ae95-fc786f76f91f" absoluteBounds="4.765, 1.835, 1.9700000000000002, 0.47632853190104169" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

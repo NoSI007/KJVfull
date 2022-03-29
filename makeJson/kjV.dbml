@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="KJVBible" Class="kjVDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\sqlexpress;Initial Catalog=KJVBible;Integrated Security=True" SettingsObjectName="makeJson.Properties.Settings" SettingsPropertyName="KJVBibleConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.json4section" Member="json4sections">
+    <Type Name="json4section">
+      <Column Name="jsont" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
